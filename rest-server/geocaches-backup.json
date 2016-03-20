@@ -1,0 +1,27 @@
+{
+  "geocaches":
+  [
+    {
+      "description": "Wells fargo arena",
+      "id": 1,
+      "lat": 33.424544,
+      "log": [],
+      "lon": -111.93092,
+      "name": "Geocache 1"
+    },
+    {
+      "description": "ASU football stadium",
+      "id": 2,
+      "lat": 33.426629,
+      "log": [],
+      "lon": -111.932567,
+      "name": "Geocache 2" },
+    {
+      "description": "TESTING THE SERVER!",
+      "id": 3,
+      "lat": 42.990967,
+      "lon": -71.463767,
+      "name": "FAR AWAY"
+    }
+  ]
+}

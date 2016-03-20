@@ -3,7 +3,7 @@
 *.iml
 
 # Data files
-*.json
+#geocaches-backup.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
