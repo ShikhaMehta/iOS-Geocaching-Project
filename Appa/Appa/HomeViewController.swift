@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class ViewController: UIViewController, NSFetchedResultsControllerDelegate {
+class HomeViewController: UIViewController, NSFetchedResultsControllerDelegate {
 
     // Initialize variables
     // Places - initialize core data entity
@@ -54,6 +54,15 @@ class ViewController: UIViewController, NSFetchedResultsControllerDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier == "search"){
+            if let viewController: HomeViewController = segue.destinationViewController as? HomeViewController {
+                // do something here
+                
+            }
+        }
     }
 
 

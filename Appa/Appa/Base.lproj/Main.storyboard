@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Appa" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Appa" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -45,7 +45,7 @@
                                     <rect key="frame" x="38" y="259" width="324" height="56"/>
                                 </variation>
                                 <connections>
-                                    <segue destination="oGN-HV-pSK" kind="push" id="ZzL-bs-hAg"/>
+                                    <segue destination="oGN-HV-pSK" kind="push" identifier="search" id="ZzL-bs-hAg"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -69,7 +69,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="604.5" y="474.75"/>
+            <point key="canvasLocation" x="-2010" y="297.75"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="hQC-sL-6Ll">
@@ -92,14 +92,6 @@
                                     <rect key="frame" x="42" y="165" width="141" height="21"/>
                                 </variation>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i5d-RU-gPj">
-                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="191" y="161" width="168" height="30"/>
-                                </variation>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search with place's information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6CK-sV-X7r">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
@@ -187,12 +179,19 @@
                                     <segue destination="8IZ-0l-jNA" kind="push" id="PIX-rC-V1J"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i5d-RU-gPj">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="191" y="161" width="168" height="30"/>
+                                </variation>
+                            </textField>
                         </subviews>
-                        <color key="backgroundColor" red="0.99607843137254903" green="0.98039215686274506" blue="0.76470588235294112" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.99607843139999996" green="0.98039215690000003" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="9cU-Z8-Pwj"/>
-                                <exclude reference="i5d-RU-gPj"/>
                                 <exclude reference="6CK-sV-X7r"/>
                                 <exclude reference="yI3-80-rvm"/>
                                 <exclude reference="tfI-WR-GFT"/>
@@ -202,12 +201,12 @@
                                 <exclude reference="oP9-JF-A7v"/>
                                 <exclude reference="xfR-iV-qZp"/>
                                 <exclude reference="G8X-aZ-NlV"/>
+                                <exclude reference="i5d-RU-gPj"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="9cU-Z8-Pwj"/>
-                                <include reference="i5d-RU-gPj"/>
                                 <include reference="6CK-sV-X7r"/>
                                 <include reference="yI3-80-rvm"/>
                                 <include reference="tfI-WR-GFT"/>
@@ -217,6 +216,7 @@
                                 <include reference="oP9-JF-A7v"/>
                                 <include reference="xfR-iV-qZp"/>
                                 <include reference="G8X-aZ-NlV"/>
+                                <include reference="i5d-RU-gPj"/>
                             </mask>
                         </variation>
                     </view>
@@ -227,7 +227,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mXh-OZ-kjk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-115.5" y="1191.75"/>
+            <point key="canvasLocation" x="-1275" y="297.75"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="J0J-EW-KOR">
@@ -346,7 +346,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.99607843137254903" green="0.98039215686274506" blue="0.71764705882352942" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.99607843139999996" green="0.98039215690000003" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="h7g-qo-Avn"/>
@@ -384,7 +384,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eDj-5x-9vv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="604.5" y="1191.75"/>
+            <point key="canvasLocation" x="-574.5" y="297.75"/>
         </scene>
         <!--Add Log Entry-->
         <scene sceneID="iOs-CY-eQc">
@@ -496,7 +496,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nBO-wL-8aM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-115.5" y="1907.25"/>
+            <point key="canvasLocation" x="202.5" y="297.75"/>
         </scene>
         <!--Log-->
         <scene sceneID="3Ai-W0-XTW">
@@ -556,7 +556,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q4Y-Iq-cp3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="604.5" y="1907.25"/>
+            <point key="canvasLocation" x="-172.5" y="1033.5"/>
         </scene>
         <!--Nearby Food-->
         <scene sceneID="eho-FC-A1R">
@@ -616,7 +616,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eTV-6v-hQh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1339.5" y="1907.25"/>
+            <point key="canvasLocation" x="-1635" y="1033.5"/>
         </scene>
         <!--Nearby Food Entry-->
         <scene sceneID="JBZ-MM-fKC">
@@ -662,7 +662,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p4m-CM-d4I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1339.5" y="2586.75"/>
+            <point key="canvasLocation" x="-897" y="1033.5"/>
         </scene>
         <!--Log Entry-->
         <scene sceneID="Zsc-hG-rqb">
@@ -799,7 +799,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9AW-fy-ZUT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="604.5" y="2586.75"/>
+            <point key="canvasLocation" x="580.5" y="1033.5"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="tJs-T1-uoS">
@@ -978,7 +978,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Ld-eX-QuB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1444.5" y="469.5"/>
+            <point key="canvasLocation" x="-2721" y="1033.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Jga-Zd-xcu">
@@ -996,10 +996,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2T2-c7-5jI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-115.5" y="474.75"/>
+            <point key="canvasLocation" x="-2721" y="297.75"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="PIX-rC-V1J"/>
+        <segue reference="0Xl-UC-dUN"/>
     </inferredMetricsTieBreakers>
 </document>

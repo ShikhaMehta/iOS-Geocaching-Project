@@ -70,16 +70,16 @@
                                 <exclude reference="JoL-jf-G5c"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="l53-Eb-TZ2"/>
-                                <exclude reference="wjQ-q6-TrW"/>
+                                <exclude reference="tnC-1E-lKu"/>
                                 <exclude reference="Lwy-XS-Vbu"/>
                                 <exclude reference="k43-fp-Pe6"/>
+                                <exclude reference="l53-Eb-TZ2"/>
+                                <exclude reference="wjQ-q6-TrW"/>
                                 <exclude reference="QEU-4P-XxN"/>
-                                <exclude reference="3Cn-Eh-m88"/>
-                                <exclude reference="JP7-sd-sb7"/>
                                 <exclude reference="HY1-Zj-loa"/>
                                 <exclude reference="m4S-OO-UDW"/>
-                                <exclude reference="tnC-1E-lKu"/>
+                                <exclude reference="3Cn-Eh-m88"/>
+                                <exclude reference="JP7-sd-sb7"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -91,16 +91,16 @@
                                 <include reference="JoL-jf-G5c"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="l53-Eb-TZ2"/>
-                                <include reference="wjQ-q6-TrW"/>
+                                <include reference="tnC-1E-lKu"/>
                                 <include reference="Lwy-XS-Vbu"/>
                                 <include reference="k43-fp-Pe6"/>
+                                <include reference="l53-Eb-TZ2"/>
+                                <include reference="wjQ-q6-TrW"/>
                                 <include reference="QEU-4P-XxN"/>
-                                <include reference="3Cn-Eh-m88"/>
-                                <include reference="JP7-sd-sb7"/>
                                 <include reference="HY1-Zj-loa"/>
                                 <include reference="m4S-OO-UDW"/>
-                                <include reference="tnC-1E-lKu"/>
+                                <include reference="3Cn-Eh-m88"/>
+                                <include reference="JP7-sd-sb7"/>
                             </mask>
                         </variation>
                     </view>
