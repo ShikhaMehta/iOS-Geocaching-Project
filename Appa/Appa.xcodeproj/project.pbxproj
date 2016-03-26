@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F317B5A1CA721F20092DB9A /* Log+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F317B581CA721F20092DB9A /* Log+CoreDataProperties.swift */; };
+		2F317B5B1CA721F20092DB9A /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F317B591CA721F20092DB9A /* Log.swift */; };
 		A7C728D11C912D01004D1F2D /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C728D01C912D01004D1F2D /* Pin.swift */; };
 		A7FE0C341C8F3C7600BA96BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FE0C331C8F3C7600BA96BE /* AppDelegate.swift */; };
 		A7FE0C361C8F3C7600BA96BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FE0C351C8F3C7600BA96BE /* ViewController.swift */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F317B581CA721F20092DB9A /* Log+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Log+CoreDataProperties.swift"; path = "../Log+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2F317B591CA721F20092DB9A /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Log.swift; path = ../Log.swift; sourceTree = "<group>"; };
 		A7C728D01C912D01004D1F2D /* Pin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pin.swift; sourceTree = "<group>"; };
 		A7FE0C301C8F3C7600BA96BE /* Appa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Appa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7FE0C331C8F3C7600BA96BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +68,8 @@
 		A7FE0C321C8F3C7600BA96BE /* Appa */ = {
 			isa = PBXGroup;
 			children = (
+				2F317B581CA721F20092DB9A /* Log+CoreDataProperties.swift */,
+				2F317B591CA721F20092DB9A /* Log.swift */,
 				A7FE0C4A1C8F653F00BA96BE /* Places+CoreDataProperties.swift */,
 				A7FE0C4B1C8F653F00BA96BE /* Places.swift */,
 				A7FE0C331C8F3C7600BA96BE /* AppDelegate.swift */,
@@ -152,8 +158,10 @@
 			files = (
 				A7C728D11C912D01004D1F2D /* Pin.swift in Sources */,
 				A7FE0C4C1C8F653F00BA96BE /* Places+CoreDataProperties.swift in Sources */,
+				2F317B5B1CA721F20092DB9A /* Log.swift in Sources */,
 				A7FE0C361C8F3C7600BA96BE /* ViewController.swift in Sources */,
 				A7FE0C3C1C8F3C7600BA96BE /* Appa.xcdatamodeld in Sources */,
+				2F317B5A1CA721F20092DB9A /* Log+CoreDataProperties.swift in Sources */,
 				A7FE0C511C8F774F00BA96BE /* DetailViewController.swift in Sources */,
 				A7FE0C341C8F3C7600BA96BE /* AppDelegate.swift in Sources */,
 				A7FE0C4D1C8F653F00BA96BE /* Places.swift in Sources */,
