@@ -8,13 +8,14 @@
         <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Places" representedClassName=".Places" syncable="YES">
-        <attribute name="latitude" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="longitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="placeDescription" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="placeName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="has" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Log" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Places" positionX="-63" positionY="-18" width="128" height="105"/>
         <element name="Log" positionX="-63" positionY="9" width="128" height="120"/>
+        <element name="Places" positionX="-63" positionY="-18" width="128" height="120"/>
     </elements>
 </model>

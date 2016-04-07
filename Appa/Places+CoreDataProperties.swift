@@ -2,7 +2,7 @@
 //  Places+CoreDataProperties.swift
 //  Appa
 //
-//  Created by Shikha Mehta on 3/8/16.
+//  Created by Tyler Brockett on 4/6/16.
 //  Copyright © 2016 ASU. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -14,9 +14,9 @@ import CoreData
 
 extension Places {
 
-    @NSManaged var placeName: String?
+    @NSManaged var latitude: NSNumber?
+    @NSManaged var longitude: NSNumber?
     @NSManaged var placeDescription: String?
-    @NSManaged var latitude: String?
-    @NSManaged var longitude: String?
+    @NSManaged var placeName: String?
 
 }
