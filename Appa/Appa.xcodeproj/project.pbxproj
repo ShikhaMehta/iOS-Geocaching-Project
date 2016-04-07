@@ -15,6 +15,8 @@
 		2F29EEBC1CB6010F00442821 /* NearbyFoodEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F29EEBB1CB6010F00442821 /* NearbyFoodEntryViewController.swift */; };
 		2F29EEBE1CB6012B00442821 /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F29EEBD1CB6012B00442821 /* LogViewController.swift */; };
 		2F29EEC01CB6014000442821 /* LogEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F29EEBF1CB6014000442821 /* LogEntryViewController.swift */; };
+		2F29EEC21CB6038200442821 /* NearbyFoodTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F29EEC11CB6038200442821 /* NearbyFoodTableCell.swift */; };
+		2F29EEC41CB6043D00442821 /* LogTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F29EEC31CB6043D00442821 /* LogTableCell.swift */; };
 		2F317B5A1CA721F20092DB9A /* Log+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F317B581CA721F20092DB9A /* Log+CoreDataProperties.swift */; };
 		2F317B5B1CA721F20092DB9A /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F317B591CA721F20092DB9A /* Log.swift */; };
 		2F317B5D1CA729700092DB9A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F317B5C1CA729700092DB9A /* SearchViewController.swift */; };
@@ -37,6 +39,8 @@
 		2F29EEBB1CB6010F00442821 /* NearbyFoodEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyFoodEntryViewController.swift; sourceTree = "<group>"; };
 		2F29EEBD1CB6012B00442821 /* LogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogViewController.swift; sourceTree = "<group>"; };
 		2F29EEBF1CB6014000442821 /* LogEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogEntryViewController.swift; sourceTree = "<group>"; };
+		2F29EEC11CB6038200442821 /* NearbyFoodTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyFoodTableCell.swift; sourceTree = "<group>"; };
+		2F29EEC31CB6043D00442821 /* LogTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogTableCell.swift; sourceTree = "<group>"; };
 		2F317B581CA721F20092DB9A /* Log+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Log+CoreDataProperties.swift"; path = "../Log+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2F317B591CA721F20092DB9A /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Log.swift; path = ../Log.swift; sourceTree = "<group>"; };
 		2F317B5C1CA729700092DB9A /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +130,8 @@
 				A7FE0C3D1C8F3C7600BA96BE /* Assets.xcassets */,
 				A7FE0C3F1C8F3C7600BA96BE /* LaunchScreen.storyboard */,
 				A7FE0C421C8F3C7600BA96BE /* Info.plist */,
+				2F29EEC11CB6038200442821 /* NearbyFoodTableCell.swift */,
+				2F29EEC31CB6043D00442821 /* LogTableCell.swift */,
 			);
 			path = Appa;
 			sourceTree = "<group>";
@@ -210,7 +216,9 @@
 				2F29EEBE1CB6012B00442821 /* LogViewController.swift in Sources */,
 				2F317B5A1CA721F20092DB9A /* Log+CoreDataProperties.swift in Sources */,
 				A7FE0C511C8F774F00BA96BE /* NewGeocacheViewController.swift in Sources */,
+				2F29EEC21CB6038200442821 /* NearbyFoodTableCell.swift in Sources */,
 				A7FE0C341C8F3C7600BA96BE /* AppDelegate.swift in Sources */,
+				2F29EEC41CB6043D00442821 /* LogTableCell.swift in Sources */,
 				2F29EEC01CB6014000442821 /* LogEntryViewController.swift in Sources */,
 				2F29EEB01CB5C9C000442821 /* Places+CoreDataProperties.swift in Sources */,
 				2F29EEB81CB600BB00442821 /* SearchResultViewController.swift in Sources */,
