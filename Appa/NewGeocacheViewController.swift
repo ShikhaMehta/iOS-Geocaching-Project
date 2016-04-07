@@ -12,7 +12,7 @@ import CoreData
 import MapKit
 import CoreLocation
 
-class DetailViewController: UIViewController, MKMapViewDelegate, UINavigationControllerDelegate, CLLocationManagerDelegate {
+class NewGeocacheViewController: UIViewController, MKMapViewDelegate, UINavigationControllerDelegate, CLLocationManagerDelegate {
 
     // IBOutlets
     @IBOutlet weak var nam: UITextField!

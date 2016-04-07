@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		2F29EEB01CB5C9C000442821 /* Places+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F29EEAE1CB5C9C000442821 /* Places+CoreDataProperties.swift */; };
 		2F29EEB11CB5C9C000442821 /* Places.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F29EEAF1CB5C9C000442821 /* Places.swift */; };
+		2F29EEB61CB6007900442821 /* NewLogEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F29EEB51CB6007900442821 /* NewLogEntryViewController.swift */; };
+		2F29EEB81CB600BB00442821 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F29EEB71CB600BB00442821 /* SearchResultViewController.swift */; };
+		2F29EEBA1CB600F700442821 /* NearbyFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F29EEB91CB600F700442821 /* NearbyFoodViewController.swift */; };
+		2F29EEBC1CB6010F00442821 /* NearbyFoodEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F29EEBB1CB6010F00442821 /* NearbyFoodEntryViewController.swift */; };
+		2F29EEBE1CB6012B00442821 /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F29EEBD1CB6012B00442821 /* LogViewController.swift */; };
+		2F29EEC01CB6014000442821 /* LogEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F29EEBF1CB6014000442821 /* LogEntryViewController.swift */; };
 		2F317B5A1CA721F20092DB9A /* Log+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F317B581CA721F20092DB9A /* Log+CoreDataProperties.swift */; };
 		2F317B5B1CA721F20092DB9A /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F317B591CA721F20092DB9A /* Log.swift */; };
 		2F317B5D1CA729700092DB9A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F317B5C1CA729700092DB9A /* SearchViewController.swift */; };
@@ -19,12 +25,18 @@
 		A7FE0C3C1C8F3C7600BA96BE /* Appa.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A7FE0C3A1C8F3C7600BA96BE /* Appa.xcdatamodeld */; };
 		A7FE0C3E1C8F3C7600BA96BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7FE0C3D1C8F3C7600BA96BE /* Assets.xcassets */; };
 		A7FE0C411C8F3C7600BA96BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7FE0C3F1C8F3C7600BA96BE /* LaunchScreen.storyboard */; };
-		A7FE0C511C8F774F00BA96BE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FE0C501C8F774F00BA96BE /* DetailViewController.swift */; };
+		A7FE0C511C8F774F00BA96BE /* NewGeocacheViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FE0C501C8F774F00BA96BE /* NewGeocacheViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2F29EEAE1CB5C9C000442821 /* Places+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Places+CoreDataProperties.swift"; path = "../Places+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2F29EEAF1CB5C9C000442821 /* Places.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Places.swift; path = ../Places.swift; sourceTree = "<group>"; };
+		2F29EEB51CB6007900442821 /* NewLogEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewLogEntryViewController.swift; sourceTree = "<group>"; };
+		2F29EEB71CB600BB00442821 /* SearchResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
+		2F29EEB91CB600F700442821 /* NearbyFoodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyFoodViewController.swift; sourceTree = "<group>"; };
+		2F29EEBB1CB6010F00442821 /* NearbyFoodEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyFoodEntryViewController.swift; sourceTree = "<group>"; };
+		2F29EEBD1CB6012B00442821 /* LogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogViewController.swift; sourceTree = "<group>"; };
+		2F29EEBF1CB6014000442821 /* LogEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogEntryViewController.swift; sourceTree = "<group>"; };
 		2F317B581CA721F20092DB9A /* Log+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Log+CoreDataProperties.swift"; path = "../Log+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2F317B591CA721F20092DB9A /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Log.swift; path = ../Log.swift; sourceTree = "<group>"; };
 		2F317B5C1CA729700092DB9A /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -37,7 +49,7 @@
 		A7FE0C3D1C8F3C7600BA96BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A7FE0C401C8F3C7600BA96BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A7FE0C421C8F3C7600BA96BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A7FE0C501C8F774F00BA96BE /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = ../DetailViewController.swift; sourceTree = "<group>"; };
+		A7FE0C501C8F774F00BA96BE /* NewGeocacheViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewGeocacheViewController.swift; path = ../NewGeocacheViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +63,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F29EEB21CB5FF3500442821 /* Places Entity */ = {
+			isa = PBXGroup;
+			children = (
+				2F29EEAE1CB5C9C000442821 /* Places+CoreDataProperties.swift */,
+				2F29EEAF1CB5C9C000442821 /* Places.swift */,
+			);
+			name = "Places Entity";
+			sourceTree = "<group>";
+		};
+		2F29EEB31CB5FF4100442821 /* Log Entity */ = {
+			isa = PBXGroup;
+			children = (
+				2F317B581CA721F20092DB9A /* Log+CoreDataProperties.swift */,
+				2F317B591CA721F20092DB9A /* Log.swift */,
+			);
+			name = "Log Entity";
+			sourceTree = "<group>";
+		};
+		2F29EEB41CB5FF4700442821 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				2F29EEB21CB5FF3500442821 /* Places Entity */,
+				2F29EEB31CB5FF4100442821 /* Log Entity */,
+			);
+			name = "Core Data";
+			sourceTree = "<group>";
+		};
 		A7FE0C271C8F3C7600BA96BE = {
 			isa = PBXGroup;
 			children = (
@@ -70,20 +109,23 @@
 		A7FE0C321C8F3C7600BA96BE /* Appa */ = {
 			isa = PBXGroup;
 			children = (
-				2F29EEAE1CB5C9C000442821 /* Places+CoreDataProperties.swift */,
-				2F29EEAF1CB5C9C000442821 /* Places.swift */,
-				2F317B581CA721F20092DB9A /* Log+CoreDataProperties.swift */,
-				2F317B591CA721F20092DB9A /* Log.swift */,
-				A7FE0C331C8F3C7600BA96BE /* AppDelegate.swift */,
-				A7FE0C351C8F3C7600BA96BE /* HomeViewController.swift */,
-				A7C728D01C912D01004D1F2D /* Pin.swift */,
-				2F317B5C1CA729700092DB9A /* SearchViewController.swift */,
-				A7FE0C501C8F774F00BA96BE /* DetailViewController.swift */,
 				A7FE0C371C8F3C7600BA96BE /* Main.storyboard */,
+				A7FE0C351C8F3C7600BA96BE /* HomeViewController.swift */,
+				2F317B5C1CA729700092DB9A /* SearchViewController.swift */,
+				2F29EEB71CB600BB00442821 /* SearchResultViewController.swift */,
+				2F29EEB51CB6007900442821 /* NewLogEntryViewController.swift */,
+				A7FE0C501C8F774F00BA96BE /* NewGeocacheViewController.swift */,
+				2F29EEB91CB600F700442821 /* NearbyFoodViewController.swift */,
+				2F29EEBB1CB6010F00442821 /* NearbyFoodEntryViewController.swift */,
+				2F29EEBD1CB6012B00442821 /* LogViewController.swift */,
+				2F29EEBF1CB6014000442821 /* LogEntryViewController.swift */,
+				A7FE0C3A1C8F3C7600BA96BE /* Appa.xcdatamodeld */,
+				2F29EEB41CB5FF4700442821 /* Core Data */,
+				A7C728D01C912D01004D1F2D /* Pin.swift */,
+				A7FE0C331C8F3C7600BA96BE /* AppDelegate.swift */,
 				A7FE0C3D1C8F3C7600BA96BE /* Assets.xcassets */,
 				A7FE0C3F1C8F3C7600BA96BE /* LaunchScreen.storyboard */,
 				A7FE0C421C8F3C7600BA96BE /* Info.plist */,
-				A7FE0C3A1C8F3C7600BA96BE /* Appa.xcdatamodeld */,
 			);
 			path = Appa;
 			sourceTree = "<group>";
@@ -160,15 +202,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F317B5D1CA729700092DB9A /* SearchViewController.swift in Sources */,
+				2F29EEB61CB6007900442821 /* NewLogEntryViewController.swift in Sources */,
 				A7C728D11C912D01004D1F2D /* Pin.swift in Sources */,
 				2F317B5B1CA721F20092DB9A /* Log.swift in Sources */,
 				A7FE0C361C8F3C7600BA96BE /* HomeViewController.swift in Sources */,
 				A7FE0C3C1C8F3C7600BA96BE /* Appa.xcdatamodeld in Sources */,
+				2F29EEBE1CB6012B00442821 /* LogViewController.swift in Sources */,
 				2F317B5A1CA721F20092DB9A /* Log+CoreDataProperties.swift in Sources */,
-				A7FE0C511C8F774F00BA96BE /* DetailViewController.swift in Sources */,
+				A7FE0C511C8F774F00BA96BE /* NewGeocacheViewController.swift in Sources */,
 				A7FE0C341C8F3C7600BA96BE /* AppDelegate.swift in Sources */,
+				2F29EEC01CB6014000442821 /* LogEntryViewController.swift in Sources */,
 				2F29EEB01CB5C9C000442821 /* Places+CoreDataProperties.swift in Sources */,
+				2F29EEB81CB600BB00442821 /* SearchResultViewController.swift in Sources */,
 				2F29EEB11CB5C9C000442821 /* Places.swift in Sources */,
+				2F29EEBC1CB6010F00442821 /* NearbyFoodEntryViewController.swift in Sources */,
+				2F29EEBA1CB600F700442821 /* NearbyFoodViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Home View Controller-->
+        <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Appa" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Home" id="BYZ-38-t0r" customClass="HomeViewController" customModule="Appa" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -36,7 +36,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="1nP-QM-mnF" kind="push" identifier="add" id="LcH-eH-Nz5"/>
+                                    <segue destination="1nP-QM-mnF" kind="push" identifier="newGeocache" id="LcH-eH-Nz5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IAo-x5-3li">
@@ -127,10 +127,10 @@
             </objects>
             <point key="canvasLocation" x="-2010" y="297.75"/>
         </scene>
-        <!--Search View Controller-->
+        <!--Search-->
         <scene sceneID="hQC-sL-6Ll">
             <objects>
-                <viewController id="oGN-HV-pSK" customClass="SearchViewController" customModule="Appa" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Search" id="oGN-HV-pSK" customClass="SearchViewController" customModule="Appa" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Kdu-LL-qed"/>
                         <viewControllerLayoutGuide type="bottom" id="JP9-yQ-bR2"/>
@@ -445,10 +445,10 @@
             </objects>
             <point key="canvasLocation" x="-1275" y="297.75"/>
         </scene>
-        <!--View Controller-->
+        <!--Search Result-->
         <scene sceneID="J0J-EW-KOR">
             <objects>
-                <viewController id="8IZ-0l-jNA" sceneMemberID="viewController">
+                <viewController title="Search Result" id="8IZ-0l-jNA" customClass="SearchResultViewController" customModule="Appa" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mEL-bf-ztR"/>
                         <viewControllerLayoutGuide type="bottom" id="Irw-3b-nac"/>
@@ -557,14 +557,14 @@
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Add Name to Log"/>
                                 <connections>
-                                    <segue destination="PxB-tr-Myk" kind="show" id="BqK-4O-vDg"/>
+                                    <segue destination="PxB-tr-Myk" kind="show" identifier="newLogEntry" id="BqK-4O-vDg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jP4-8y-dAK">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="View Log"/>
                                 <connections>
-                                    <segue destination="dZM-XL-Mxo" kind="show" id="ajU-HA-agc"/>
+                                    <segue destination="dZM-XL-Mxo" kind="show" identifier="log" id="ajU-HA-agc"/>
                                 </connections>
                             </button>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="IWa-D9-lhv">
@@ -587,7 +587,7 @@
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="View Food Nearby"/>
                                 <connections>
-                                    <segue destination="IrG-b9-Tqz" kind="show" id="Zuf-P5-mvz"/>
+                                    <segue destination="IrG-b9-Tqz" kind="show" identifier="nearbyFood" id="Zuf-P5-mvz"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -739,10 +739,10 @@
             </objects>
             <point key="canvasLocation" x="-574.5" y="297.75"/>
         </scene>
-        <!--Add Log Entry-->
+        <!--New Log Entry-->
         <scene sceneID="iOs-CY-eQc">
             <objects>
-                <viewController title="Add Log Entry" id="PxB-tr-Myk" sceneMemberID="viewController">
+                <viewController title="New Log Entry" id="PxB-tr-Myk" customClass="NewLogEntryViewController" customModule="Appa" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WjV-az-Tqc"/>
                         <viewControllerLayoutGuide type="bottom" id="FbT-RV-x5K"/>
@@ -796,6 +796,10 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QGK-js-zRF">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Save"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.99607843139999996" green="0.98039215690000003" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -808,9 +812,11 @@
                             <constraint firstItem="ly4-Ix-Acj" firstAttribute="centerX" secondItem="Vk9-3h-QXq" secondAttribute="centerX" id="EmO-tJ-2nV"/>
                             <constraint firstItem="vld-su-x97" firstAttribute="top" secondItem="x6N-xv-cCD" secondAttribute="bottom" constant="13" id="Guj-Uq-hUz"/>
                             <constraint firstItem="DP7-WH-CnE" firstAttribute="centerX" secondItem="Vk9-3h-QXq" secondAttribute="centerX" id="Mzz-mt-u3p"/>
+                            <constraint firstItem="QGK-js-zRF" firstAttribute="centerX" secondItem="Vk9-3h-QXq" secondAttribute="centerX" id="NKC-R8-9tc"/>
                             <constraint firstItem="ly4-Ix-Acj" firstAttribute="centerX" secondItem="0tp-z6-46R" secondAttribute="centerX" id="NoD-6I-I1F"/>
                             <constraint firstAttribute="leadingMargin" secondItem="vld-su-x97" secondAttribute="leading" id="QW7-id-LcU"/>
                             <constraint firstItem="zl8-dr-tci" firstAttribute="top" secondItem="ly4-Ix-Acj" secondAttribute="bottom" constant="8" symbolic="YES" id="VRH-l1-9Ue"/>
+                            <constraint firstItem="QGK-js-zRF" firstAttribute="top" secondItem="0tp-z6-46R" secondAttribute="bottom" constant="8" id="fVW-I7-psz"/>
                             <constraint firstItem="uyg-5k-jjY" firstAttribute="top" secondItem="WjV-az-Tqc" secondAttribute="bottom" constant="25" id="lbu-ri-nQM"/>
                             <constraint firstItem="FbT-RV-x5K" firstAttribute="top" secondItem="0tp-z6-46R" secondAttribute="bottom" constant="473" id="oMV-sY-ya1"/>
                             <constraint firstItem="ly4-Ix-Acj" firstAttribute="leading" secondItem="uyg-5k-jjY" secondAttribute="trailing" constant="87" id="rCV-lr-Aeg"/>
@@ -834,6 +840,7 @@
                                 <exclude reference="x6N-xv-cCD"/>
                                 <exclude reference="vld-su-x97"/>
                                 <exclude reference="0tp-z6-46R"/>
+                                <exclude reference="QGK-js-zRF"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="lbu-ri-nQM"/>
@@ -859,6 +866,8 @@
                                 <exclude reference="xia-qf-OAs"/>
                                 <exclude reference="5UD-sk-y8d"/>
                                 <exclude reference="Mzz-mt-u3p"/>
+                                <exclude reference="NKC-R8-9tc"/>
+                                <exclude reference="fVW-I7-psz"/>
                                 <exclude reference="oMV-sY-ya1"/>
                             </mask>
                         </variation>
@@ -872,6 +881,7 @@
                                 <include reference="x6N-xv-cCD"/>
                                 <include reference="vld-su-x97"/>
                                 <include reference="0tp-z6-46R"/>
+                                <include reference="QGK-js-zRF"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="lbu-ri-nQM"/>
@@ -897,6 +907,8 @@
                                 <include reference="xia-qf-OAs"/>
                                 <include reference="5UD-sk-y8d"/>
                                 <include reference="Mzz-mt-u3p"/>
+                                <include reference="NKC-R8-9tc"/>
+                                <include reference="fVW-I7-psz"/>
                                 <include reference="oMV-sY-ya1"/>
                             </mask>
                         </variation>
@@ -909,7 +921,7 @@
         <!--Log-->
         <scene sceneID="3Ai-W0-XTW">
             <objects>
-                <tableViewController title="Log" id="dZM-XL-Mxo" sceneMemberID="viewController">
+                <tableViewController title="Log" id="dZM-XL-Mxo" customClass="LogViewController" customModule="Appa" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="77Y-TL-nuG">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -955,7 +967,7 @@
                                     </variation>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="aan-TJ-fEL" kind="show" id="5yt-Za-1qz"/>
+                                    <segue destination="aan-TJ-fEL" kind="show" identifier="logEntry" id="5yt-Za-1qz"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -972,7 +984,7 @@
         <!--Nearby Food-->
         <scene sceneID="eho-FC-A1R">
             <objects>
-                <tableViewController title="Nearby Food" id="IrG-b9-Tqz" sceneMemberID="viewController">
+                <tableViewController title="Nearby Food" id="IrG-b9-Tqz" customClass="NearbyFoodViewController" customModule="Appa" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="aPN-ej-tKR">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1018,7 +1030,7 @@
                                     </variation>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="0JU-md-PQs" kind="show" id="fc0-XJ-42C"/>
+                                    <segue destination="0JU-md-PQs" kind="show" identifier="nearbyFoodEntry" id="fc0-XJ-42C"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -1035,7 +1047,7 @@
         <!--Nearby Food Entry-->
         <scene sceneID="JBZ-MM-fKC">
             <objects>
-                <viewController title="Nearby Food Entry" id="0JU-md-PQs" sceneMemberID="viewController">
+                <viewController title="Nearby Food Entry" id="0JU-md-PQs" customClass="NearbyFoodEntryViewController" customModule="Appa" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BJl-rT-Tbg"/>
                         <viewControllerLayoutGuide type="bottom" id="F7B-Cp-XmJ"/>
@@ -1100,7 +1112,7 @@
         <!--Log Entry-->
         <scene sceneID="Zsc-hG-rqb">
             <objects>
-                <viewController title="Log Entry" id="aan-TJ-fEL" sceneMemberID="viewController">
+                <viewController title="Log Entry" id="aan-TJ-fEL" customClass="LogEntryViewController" customModule="Appa" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bMK-wh-N1u"/>
                         <viewControllerLayoutGuide type="bottom" id="Y3G-yR-Mic"/>
@@ -1277,10 +1289,10 @@
             </objects>
             <point key="canvasLocation" x="580.5" y="1033.5"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--New Geocache-->
         <scene sceneID="tJs-T1-uoS">
             <objects>
-                <viewController id="1nP-QM-mnF" customClass="DetailViewController" customModule="Appa" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="New Geocache" id="1nP-QM-mnF" customClass="NewGeocacheViewController" customModule="Appa" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lID-IM-fFc"/>
                         <viewControllerLayoutGuide type="bottom" id="ba7-gs-DpF"/>
