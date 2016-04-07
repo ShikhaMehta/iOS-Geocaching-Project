@@ -1,8 +1,8 @@
 //
-//  Places+CoreDataProperties.swift
+//  Geocache+CoreDataProperties.swift
 //  Appa
 //
-//  Created by Tyler Brockett on 4/6/16.
+//  Created by Tyler Brockett on 4/7/16.
 //  Copyright © 2016 ASU. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -12,11 +12,11 @@
 import Foundation
 import CoreData
 
-extension Places {
+extension Geocache {
 
+    @NSManaged var desc: String?
     @NSManaged var latitude: NSNumber?
     @NSManaged var longitude: NSNumber?
-    @NSManaged var placeDescription: String?
-    @NSManaged var placeName: String?
+    @NSManaged var name: String?
 
 }

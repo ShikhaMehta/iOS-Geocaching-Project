@@ -13,7 +13,7 @@ class HomeViewController: UIViewController, NSFetchedResultsControllerDelegate {
 
     // Initialize variables
     // Places - initialize core data entity
-    var places:Places? = nil
+    var geocache:Geocache? = nil
     var context: NSManagedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     var dataViewController: NSFetchedResultsController = NSFetchedResultsController()
 
@@ -29,8 +29,8 @@ class HomeViewController: UIViewController, NSFetchedResultsControllerDelegate {
     // listFetchRequest() - list results returned from a Core Data fetch request
     func listFetchRequest() -> NSFetchRequest {
 
-        let fetchRequest = NSFetchRequest(entityName: "Places")
-        let sortDescripter = NSSortDescriptor(key: "placeName", ascending: true)
+        let fetchRequest = NSFetchRequest(entityName: "Geocache")
+        let sortDescripter = NSSortDescriptor(key: "name", ascending: true)
         fetchRequest.sortDescriptors = [sortDescripter]
         return fetchRequest
 

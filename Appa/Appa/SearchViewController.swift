@@ -20,7 +20,7 @@ class SearchViewController: UIViewController, UINavigationControllerDelegate, CL
     
     // Initialize variables
     // Places - initialize core data entity
-    var places:Places? = nil
+    var geocache:Geocache? = nil
     var context: NSManagedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     var dataViewController: NSFetchedResultsController = NSFetchedResultsController()
     
@@ -33,7 +33,7 @@ class SearchViewController: UIViewController, UINavigationControllerDelegate, CL
         
         // Create Entity Description
         //let entityDescription = NSEntityDescription.entityForName("Places", inManagedObjectContext: context)
-        let entityDescription = NSEntityDescription.entityForName("Places", inManagedObjectContext: self.context)
+        let entityDescription = NSEntityDescription.entityForName("Geocache", inManagedObjectContext: self.context)
         
         
         // Configure Fetch Request
@@ -48,9 +48,9 @@ class SearchViewController: UIViewController, UINavigationControllerDelegate, CL
                 {
                     let person = result[i] as! NSManagedObject
                     
-                    if let placenameStr = person.valueForKey("placeName"), placedescriptionStr = person.valueForKey("placeDescription") {
+                    if let geocacheNameStr = person.valueForKey("name"), geocacheDescriptionStr = person.valueForKey("desc") {
                         
-                        if placenameStr.isEqual(self.searchName.text){
+                        if geocacheNameStr.isEqual(self.searchName.text){
                             print("love")
                         }
                         
@@ -85,8 +85,8 @@ class SearchViewController: UIViewController, UINavigationControllerDelegate, CL
     // listFetchRequest() - list results returned from a Core Data fetch request
     func listFetchRequest() -> NSFetchRequest {
         
-        let fetchRequest = NSFetchRequest(entityName: "Places")
-        let sortDescripter = NSSortDescriptor(key: "placeName", ascending: true)
+        let fetchRequest = NSFetchRequest(entityName: "Geocache")
+        let sortDescripter = NSSortDescriptor(key: "name", ascending: true)
         fetchRequest.sortDescriptors = [sortDescripter]
         return fetchRequest
         

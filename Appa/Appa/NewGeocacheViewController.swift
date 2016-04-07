@@ -28,7 +28,7 @@ class NewGeocacheViewController: UIViewController, MKMapViewDelegate, UINavigati
     // Initialize variables
     let context = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
 
-    var nItem:Places? = nil
+    var nItem:Geocache? = nil
 
     let locationManager = CLLocationManager()
 
@@ -50,10 +50,10 @@ class NewGeocacheViewController: UIViewController, MKMapViewDelegate, UINavigati
         locationManager.startUpdatingLocation()
 
         if nItem != nil {
-            nam.text = nItem?.placeName
-            descriptio.text = nItem?.placeDescription
-            longitude.text = nItem?.longitude
-            latitude.text = nItem?.latitude
+            nam.text = nItem?.name
+            descriptio.text = nItem?.desc
+            longitude.text = "\(nItem?.longitude)"
+            latitude.text = "\(nItem?.latitude)"
         }
 
         // show the keyboard
@@ -148,13 +148,13 @@ class NewGeocacheViewController: UIViewController, MKMapViewDelegate, UINavigati
          if nItem == nil
         {
             let context = self.context
-            let ent = NSEntityDescription.entityForName("Places", inManagedObjectContext: context)
+            let ent = NSEntityDescription.entityForName("Geocache", inManagedObjectContext: context)
 
-            let nItem = Places(entity: ent!, insertIntoManagedObjectContext: context)
-            nItem.placeName = nam.text!
-            nItem.placeDescription = descriptio.text!
-            nItem.latitude = latitude.text!
-            nItem.longitude = longitude.text!
+            let nItem = Geocache(entity: ent!, insertIntoManagedObjectContext: context)
+            nItem.name = nam.text!
+            nItem.desc = descriptio.text!
+            nItem.latitude = Double(latitude.text!)
+            nItem.longitude = Double(longitude.text!)
 
             do {
                 //try context.save()
@@ -163,10 +163,10 @@ class NewGeocacheViewController: UIViewController, MKMapViewDelegate, UINavigati
             }
         } else {
 
-            nItem!.placeName = nam.text!
-            nItem!.placeDescription = descriptio.text!
-            nItem!.latitude = latitude.text!
-            nItem!.longitude = longitude.text!
+            nItem!.name = nam.text!
+            nItem!.desc = descriptio.text!
+            nItem!.latitude = Double(latitude.text!)
+            nItem!.longitude = Double(longitude.text!)
             do {
                 //try context.save()
                 try nItem!.managedObjectContext?.save()
