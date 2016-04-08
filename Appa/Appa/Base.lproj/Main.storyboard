@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="OhM-xO-4Sd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="OhM-xO-4Sd">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -24,18 +24,14 @@
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="28"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                <variation key="heightClass=regular-widthClass=compact">
                                     <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="28"/>
-                                    <rect key="frame" x="53" y="110" width="295" height="44"/>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qee-yQ-cra">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="20"/>
                                 <state key="normal" title="Add new Geocache"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="114" y="192" width="173" height="43"/>
-                                </variation>
                                 <connections>
                                     <segue destination="1nP-QM-mnF" kind="show" identifier="newGeocache" id="LcH-eH-Nz5"/>
                                 </connections>
@@ -44,9 +40,6 @@
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="22"/>
                                 <state key="normal" title="Search existing Geocaches"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="69" y="258" width="263" height="46"/>
-                                </variation>
                                 <connections>
                                     <segue destination="oGN-HV-pSK" kind="show" identifier="search" id="ZzL-bs-hAg"/>
                                 </connections>
@@ -54,10 +47,16 @@
                         </subviews>
                         <color key="backgroundColor" red="0.99554155759162299" green="0.98095040403304756" blue="0.8060133033145922" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="qee-yQ-cra" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FEf-f4-WxP"/>
                             <constraint firstItem="Qwl-ct-vUE" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="QaI-t7-tOd"/>
                             <constraint firstItem="Qwl-ct-vUE" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="U9p-nn-YkH"/>
                             <constraint firstItem="Qwl-ct-vUE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="W1a-WX-axP"/>
+                            <constraint firstItem="qee-yQ-cra" firstAttribute="top" secondItem="Qwl-ct-vUE" secondAttribute="bottom" constant="38" id="bAJ-5C-JPj"/>
+                            <constraint firstItem="IAo-x5-3li" firstAttribute="top" secondItem="qee-yQ-cra" secondAttribute="bottom" constant="23" id="lTb-VX-J1Y"/>
+                            <constraint firstItem="Qwl-ct-vUE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="n32-KF-L3T"/>
+                            <constraint firstItem="IAo-x5-3li" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qz1-1Q-Crl"/>
                             <constraint firstItem="Qwl-ct-vUE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="wlc-69-Yxo"/>
+                            <constraint firstItem="Qwl-ct-vUE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="46" id="wsi-zZ-1cd"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -69,7 +68,13 @@
                                 <exclude reference="QaI-t7-tOd"/>
                                 <exclude reference="U9p-nn-YkH"/>
                                 <exclude reference="W1a-WX-axP"/>
+                                <exclude reference="n32-KF-L3T"/>
                                 <exclude reference="wlc-69-Yxo"/>
+                                <exclude reference="wsi-zZ-1cd"/>
+                                <exclude reference="FEf-f4-WxP"/>
+                                <exclude reference="bAJ-5C-JPj"/>
+                                <exclude reference="lTb-VX-J1Y"/>
+                                <exclude reference="qz1-1Q-Crl"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -82,7 +87,13 @@
                                 <exclude reference="QaI-t7-tOd"/>
                                 <exclude reference="U9p-nn-YkH"/>
                                 <exclude reference="W1a-WX-axP"/>
+                                <include reference="n32-KF-L3T"/>
                                 <exclude reference="wlc-69-Yxo"/>
+                                <include reference="wsi-zZ-1cd"/>
+                                <include reference="FEf-f4-WxP"/>
+                                <include reference="bAJ-5C-JPj"/>
+                                <include reference="lTb-VX-J1Y"/>
+                                <include reference="qz1-1Q-Crl"/>
                             </mask>
                         </variation>
                     </view>
