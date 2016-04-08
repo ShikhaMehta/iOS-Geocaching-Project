@@ -62,10 +62,36 @@ class NetworkAsyncTask {
         return true
     }
     
-    func getFoodNearby(lat:Double, lon:Double, radius:Double, callback: (String, String?) -> Void) -> Bool {
+    func getFoodNearby(lat:Double, lon:Double, radius:Double, callback: (NSArray?, String?) -> Void) -> Bool {
         let rad:Double = 1609.34 * radius // 1609 meters in a mile
         let url:String = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=\(lat),\(lon)&radius=\(rad)&types=food&key=\(GOOGLE_API_KEY)"
-        httpGet(url, callback: callback)
+        httpGet(url, callback: { (res:String, error: String?) -> Void in
+            if error != nil {
+                callback(nil, "Error occurred")
+            } else {
+                if let data: NSData = res.dataUsingEncoding(NSUTF8StringEncoding){
+                    do{
+                        let dict = try NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers) as? [String:AnyObject]
+                        if ((dict!["status"] as! String) == "OK") {
+                            let results:NSArray = dict!["results"] as! NSArray
+                            var returnArray:[Restaurant] = []
+                            for var i = 0; i < results.count; i++ {
+                                let restaurant:Restaurant = Restaurant(dict: results[i] as! NSDictionary)
+                                returnArray.append(restaurant)
+                            }
+                            callback(returnArray as NSArray, nil)
+                        } else {
+                            callback(nil, "Error")
+                        }
+                    } catch let error as NSError {
+                        NSLog(error.localizedDescription)
+                        callback(nil, error.localizedDescription)
+                    }
+                } else {
+                    callback(nil, "Error")
+                }
+            }
+        })
         return true
     }
     

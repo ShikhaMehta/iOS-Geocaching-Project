@@ -2,7 +2,7 @@
 //  Log.swift
 //  Appa
 //
-//  Created by Tyler Brockett on 3/26/16.
+//  Created by Tyler Brockett on 4/7/16.
 //  Copyright © 2016 ASU. All rights reserved.
 //
 

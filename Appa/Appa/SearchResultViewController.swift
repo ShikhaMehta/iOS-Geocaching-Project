@@ -26,6 +26,8 @@ class SearchResultViewController: UIViewController {
     @IBOutlet weak var highTemp: UILabel!
     @IBOutlet weak var weatherDescription: UILabel!
     
+    var restaurants:NSArray = NSArray()
+    
     // viewDidLoad() - loads view into the memory and does view initialization
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,9 +50,9 @@ class SearchResultViewController: UIViewController {
     
     func setForecastData(forecast:WeatherForecast?) {
         if forecast != nil {
-            self.currentTemp.text = forecast!.getTemp()
-            self.lowTemp.text = forecast!.getLow()
-            self.highTemp.text = forecast!.getHigh()
+            self.currentTemp.text = forecast!.getTemp() + " F"
+            self.lowTemp.text = forecast!.getLow() + " F"
+            self.highTemp.text = forecast!.getHigh() + " F"
             self.weatherDescription.text = forecast!.getDescription()
         } else {
             self.currentTemp.text = "Error"
@@ -59,5 +61,34 @@ class SearchResultViewController: UIViewController {
             self.weatherDescription.text = "Error"
         }
     }
+    
+    @IBAction func foodNearby(sender: UIButton) {
+        if let lat:Double = (latitude.text! as NSString).doubleValue, lon:Double = (longitude.text! as NSString).doubleValue {
+            let task = NetworkAsyncTask()
+            task.getFoodNearby(lat, lon: lon, radius: 5.0, callback: { (res:NSArray?, error: String?) -> Void in
+                if error == nil && res != nil {
+                    self.restaurants = res!
+                    self.performSegueWithIdentifier("nearbyFood", sender: nil)
+                } else {
+                    NSLog(error!)
+                }
+            })
+        } else {
+        
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier == "nearbyFood"){
+            if let viewController: NearbyFoodViewController = segue.destinationViewController as? NearbyFoodViewController {
+                viewController.restaurants = self.restaurants
+                if let lat:Double = (latitude.text! as NSString).doubleValue, lon:Double = (longitude.text! as NSString).doubleValue {
+                    viewController.latitude = lat
+                    viewController.longitude = lon
+                }
+            }
+        }
+    }
+    
     
 }
