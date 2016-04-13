@@ -13,6 +13,7 @@ import Foundation
 class SearchResultViewController: UIViewController {
     
     var geocache:Geocache?
+    var geocacheLocation:CLLocation = CLLocation()
     
     @IBOutlet weak var mapView: MKMapView!
     

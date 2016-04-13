@@ -58,10 +58,7 @@ class SearchViewController: UIViewController, UINavigationControllerDelegate, CL
                     }
                     
                 }
-                //  print("1 - \(person)")
-                
-                
-                // print("2 - \(person)")
+
             }
             
             

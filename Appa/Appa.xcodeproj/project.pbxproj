@@ -31,6 +31,8 @@
 		A7FE0C3C1C8F3C7600BA96BE /* Appa.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A7FE0C3A1C8F3C7600BA96BE /* Appa.xcdatamodeld */; };
 		A7FE0C3E1C8F3C7600BA96BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7FE0C3D1C8F3C7600BA96BE /* Assets.xcassets */; };
 		A7FE0C411C8F3C7600BA96BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7FE0C3F1C8F3C7600BA96BE /* LaunchScreen.storyboard */; };
+		E6A632A11CBDACE1008F07F3 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A632A01CBDACE1008F07F3 /* SearchTableViewController.swift */; };
+		E6A632A31CBDFED3008F07F3 /* SearchTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A632A21CBDFED3008F07F3 /* SearchTableCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +62,8 @@
 		A7FE0C3D1C8F3C7600BA96BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A7FE0C401C8F3C7600BA96BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A7FE0C421C8F3C7600BA96BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6A632A01CBDACE1008F07F3 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
+		E6A632A21CBDFED3008F07F3 /* SearchTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,7 @@
 			children = (
 				2F29EEC11CB6038200442821 /* NearbyFoodTableCell.swift */,
 				2F29EEC31CB6043D00442821 /* LogTableCell.swift */,
+				E6A632A21CBDFED3008F07F3 /* SearchTableCell.swift */,
 			);
 			name = CustomTableViewCells;
 			sourceTree = "<group>";
@@ -132,6 +137,7 @@
 				A7FE0C351C8F3C7600BA96BE /* HomeViewController.swift */,
 				2F29EED81CB666A700442821 /* NewGeocacheViewController.swift */,
 				2F317B5C1CA729700092DB9A /* SearchViewController.swift */,
+				E6A632A01CBDACE1008F07F3 /* SearchTableViewController.swift */,
 				2F29EEB71CB600BB00442821 /* SearchResultViewController.swift */,
 				2F29EEB51CB6007900442821 /* NewLogEntryViewController.swift */,
 				2F29EEB91CB600F700442821 /* NearbyFoodViewController.swift */,
@@ -243,7 +249,9 @@
 				2F29EEDD1CB6F43300442821 /* Restaurant.swift in Sources */,
 				2F29EEE41CB7302600442821 /* Log+CoreDataProperties.swift in Sources */,
 				2F29EED41CB6630000442821 /* Geocache+CoreDataProperties.swift in Sources */,
+				E6A632A11CBDACE1008F07F3 /* SearchTableViewController.swift in Sources */,
 				2F29EEDB1CB666A700442821 /* NewGeocacheViewController.swift in Sources */,
+				E6A632A31CBDFED3008F07F3 /* SearchTableCell.swift in Sources */,
 				2F29EEBA1CB600F700442821 /* NearbyFoodViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
