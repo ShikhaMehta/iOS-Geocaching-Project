@@ -16,14 +16,18 @@ class WeatherForecast {
     var desc:String = ""
     var error:Bool = true
     
-    init(data:String) {
-        if let data: NSData = data.dataUsingEncoding(NSUTF8StringEncoding){
+    init(result:String) {
+        if let data: NSData = result.dataUsingEncoding(NSUTF8StringEncoding){
             do{
+                print(result)
                 let dict = try NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers) as? [String:AnyObject]
-                self.current = dict!["coord"]!["main"]!!["temp"] as! String
-                self.low = dict!["coord"]!["main"]!!["temp_min"] as! String
-                self.high = dict!["coord"]!["main"]!!["temp_max"] as! String
-                self.desc = dict!["coord"]!["weather"]!![0]["main"] as! String
+                let main:NSDictionary = dict!["main"]! as! NSDictionary
+                let weather:NSArray = dict!["weather"] as! NSArray
+                
+                self.current = String(main["temp"]!)
+                self.low = String(main["temp_min"]!)
+                self.high = String(main["temp_max"]!)
+                self.desc = String(weather[0]["main"]!!)
                 self.error = false
             } catch let error as NSError {
                 NSLog(error.localizedDescription)

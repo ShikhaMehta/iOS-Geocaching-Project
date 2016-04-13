@@ -15,10 +15,8 @@ import CoreLocation
 class SearchTableViewController: UITableViewController, UINavigationControllerDelegate, CLLocationManagerDelegate, NSFetchedResultsControllerDelegate {
    
     
-    var geocache:NSArray = NSArray()
-    var latitude:Double = 0.0
-    var longitude:Double = 0.0
-    var geocacheLocation:CLLocation = CLLocation()
+    var geocache:[Geocache] = []
+    var baseLocation:CLLocation = CLLocation(latitude: 0.0, longitude: 0.0)
     
     // Initialize variables
     // Places - initialize core data entity
@@ -27,13 +25,12 @@ class SearchTableViewController: UITableViewController, UINavigationControllerDe
     var dataViewController: NSFetchedResultsController = NSFetchedResultsController()
 
     
-    @IBOutlet weak var searchTable: UITableView!
+    @IBOutlet var searchTable: UITableView!
+
     
     override func viewDidLoad() {
         self.searchTable.reloadData()
-        
-        geocacheLocation = CLLocation(latitude: latitude, longitude: longitude)
-        
+                
         dataViewController = getFetchResultsController()
         
         dataViewController.delegate = self
@@ -76,11 +73,13 @@ class SearchTableViewController: UITableViewController, UINavigationControllerDe
     
     override func tableView(tableView: UITableView,cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("searchCell", forIndexPath: indexPath) as! SearchTableCell
-        let tempGeocache:Geocache = geocache[indexPath.row] as! Geocache
-        print("gotHEREE")
-        print("gotHEREE")
-        print("gotHEREE")
-
+        let tempGeocache:Geocache = geocache[indexPath.row]
+        
+        let geoLocation = CLLocation(latitude: Double(tempGeocache.latitude!), longitude: Double(tempGeocache.longitude!))
+        let distance:Double = geoLocation.distanceFromLocation(self.baseLocation) / 1609.34
+        cell.distance.text = "\(String(format:"%.1f", distance)) mi"
+        cell.geoName.text = tempGeocache.name!
+        
         //let geocacheLocation = CLLocation(latitude: Double(tempGeocache.latitude!), longitude: Double(tempGeocache.longitude!))
         
         return cell;
@@ -90,8 +89,8 @@ class SearchTableViewController: UITableViewController, UINavigationControllerDe
         if(segue.identifier == "searchResult"){
             let selectedIndex: NSIndexPath = self.searchTable.indexPathForCell(sender as! UITableViewCell)!
             if let viewController: SearchResultViewController = segue.destinationViewController as? SearchResultViewController {
-                viewController.geocache = geocache[selectedIndex.row] as! Geocache
-                viewController.geocacheLocation = self.geocacheLocation
+                viewController.geocache = geocache[selectedIndex.row]
+                viewController.baseLocation = self.baseLocation
             }
         }
     }

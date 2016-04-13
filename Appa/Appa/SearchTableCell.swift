@@ -4,8 +4,11 @@ import Foundation
 
 class SearchTableCell: UITableViewCell {
     
+    @IBOutlet weak var distance: UILabel!
+    @IBOutlet weak var geoName: UILabel!
     
     override func awakeFromNib() {
+        
         super.awakeFromNib()
         // Initialization code
     }

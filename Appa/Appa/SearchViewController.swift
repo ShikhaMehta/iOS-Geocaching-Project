@@ -14,13 +14,26 @@ import CoreLocation
 
 class SearchViewController: UIViewController, UINavigationControllerDelegate, CLLocationManagerDelegate, NSFetchedResultsControllerDelegate {
     
-    
+    let locationManager = CLLocationManager()
+
+    var withinRadius:[Geocache] = []
     
     @IBOutlet weak var searchName: UITextField!
     
+    @IBOutlet weak var latitude: UITextField!
+    @IBOutlet weak var longitude: UITextField!
+    @IBOutlet weak var radius: UITextField!
+    
+    @IBAction func presentLocation(sender: UIButton) {
+        latitude.text = String(format:"%.3f", locationManager.location!.coordinate.latitude)
+        longitude.text = String(format:"%.3f", locationManager.location!.coordinate.longitude)
+    }
+    
+    
+    
     // Initialize variables
     // Places - initialize core data entity
-    var geocache:Geocache? = nil
+    
     var context: NSManagedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     var dataViewController: NSFetchedResultsController = NSFetchedResultsController()
     
@@ -29,7 +42,7 @@ class SearchViewController: UIViewController, UINavigationControllerDelegate, CL
     //var nItem:Places? = nil
 
     @IBAction func searchBegin(sender: UIButton) {
-        let fetchRequest = NSFetchRequest()
+        let fetchRequest = NSFetchRequest(entityName: "Geocache")
         
         // Create Entity Description
         //let entityDescription = NSEntityDescription.entityForName("Places", inManagedObjectContext: context)
@@ -37,35 +50,31 @@ class SearchViewController: UIViewController, UINavigationControllerDelegate, CL
         
         
         // Configure Fetch Request
-        fetchRequest.entity = entityDescription
+        //fetchRequest.entity = entityDescription
+        
+        withinRadius = []
+        
+        var location:CLLocation = CLLocation(latitude: Double(latitude.text!)!, longitude: Double(longitude.text!)!)
         
         do {
             let result = try self.context.executeFetchRequest(fetchRequest)
-            //print(result)
-            
-            if (result.count > 0) {
-                for(var i = 0;i < result.count; i++)
-                {
-                    let person = result[i] as! NSManagedObject
-                    
-                    if let geocacheNameStr = person.valueForKey("name"), geocacheDescriptionStr = person.valueForKey("desc") {
-                        
-                        if geocacheNameStr.isEqual(self.searchName.text){
-                            print("love")
-                        }
-                        
-                        //print("\(placenameStr) \(placedescriptionStr)")
-                    }
-                    
+            let maxDist = radius
+            for(var i = 0;i < result.count; i++){
+                let geocache = result[i] as! Geocache
+                let geoLocation:CLLocation = CLLocation(latitude: Double(geocache.latitude!), longitude: Double(geocache.longitude!))
+                let distance:Double = geoLocation.distanceFromLocation(location) / 1609.34
+                NSLog("Distance: \(distance)")
+                if distance <= Double(radius.text!){
+                    withinRadius.append(geocache)
                 }
-
             }
-            
+            performSegueWithIdentifier("searchTable", sender: nil)
             
         } catch {
             let fetchError = error as NSError
             print(fetchError)
         }
+        
         
     }
     
@@ -93,6 +102,15 @@ class SearchViewController: UIViewController, UINavigationControllerDelegate, CL
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.radius.text = "5"
+        
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.requestAlwaysAuthorization()
+        locationManager.startUpdatingLocation()
+
+        
         dataViewController = getFetchResultsController()
         
         dataViewController.delegate = self
@@ -109,6 +127,17 @@ class SearchViewController: UIViewController, UINavigationControllerDelegate, CL
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil);
         
     }
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        self.locationManager.stopUpdatingLocation()
+        
+    }
+    
+    func locationManager(manager: CLLocationManager, didFailWithError error:NSError) {
+        print("Errors" + error.localizedDescription)
+    }
+    
     
     // didReceiveMemoryWarning() - handles low memory conditions
     override func didReceiveMemoryWarning() {
@@ -134,10 +163,17 @@ class SearchViewController: UIViewController, UINavigationControllerDelegate, CL
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         view.endEditing(true)
         self.searchName.resignFirstResponder()
-        
-        
     }
     
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier == "searchTable"){
+            if let viewController: SearchTableViewController = segue.destinationViewController as? SearchTableViewController {
+                viewController.geocache = withinRadius
+                viewController.baseLocation = CLLocation(latitude: Double(self.latitude.text!)!, longitude: Double(self.longitude.text!)!)
+            }
+        }
+    }
 
     
 }

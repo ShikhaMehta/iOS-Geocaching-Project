@@ -11,16 +11,20 @@ import UIKit
 import Foundation
 
 class NearbyFoodViewController: UITableViewController {
-    var restaurants:NSArray = NSArray()
-    var latitude:Double = 0.0
-    var longitude:Double = 0.0
+    var restaurants:[Restaurant] = []
     var geocacheLocation:CLLocation = CLLocation()
     
     @IBOutlet var restaurantsTable: UITableView!
     
     override func viewDidLoad() {
+        restaurants.sortInPlace() {
+            (r1, r2) in
+            let r1Loc:CLLocation = CLLocation(latitude: r1.latitude, longitude: r1.longitude)
+            let r2Loc:CLLocation = CLLocation(latitude: r2.latitude, longitude: r2.longitude)
+            return r1Loc.distanceFromLocation(self.geocacheLocation) < r2Loc.distanceFromLocation(self.geocacheLocation)
+        }
+        
         self.restaurantsTable.reloadData()
-        geocacheLocation = CLLocation(latitude: latitude, longitude: longitude)
     }
     
     // TableView functions
@@ -30,10 +34,10 @@ class NearbyFoodViewController: UITableViewController {
     
     override func tableView(tableView: UITableView,cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("foodCell", forIndexPath: indexPath) as! NearbyFoodTableCell
-        let restaurant:Restaurant = restaurants[indexPath.row] as! Restaurant
+        let restaurant:Restaurant = restaurants[indexPath.row]
         cell.restaurantName.text = restaurant.name
         let restaurantLocation = CLLocation(latitude: restaurant.latitude, longitude: restaurant.longitude)
-        cell.distance.text = String(geocacheLocation.distanceFromLocation(restaurantLocation) / 1609.34) + " mi"
+        cell.distance.text = String(format:"%.1f", geocacheLocation.distanceFromLocation(restaurantLocation) / 1609.34) + " mi"
         return cell;
     }
     

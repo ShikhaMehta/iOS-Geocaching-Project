@@ -25,7 +25,7 @@ class NearbyFoodEntryViewController: UIViewController {
         let distance:Double = geocacheLocation.distanceFromLocation(CLLocation(latitude: restaurant.latitude, longitude: restaurant.longitude))
         
         let middlePoint = CLLocationCoordinate2D(latitude: ((restLat + geoLat)/2.0), longitude: ((restLon + geoLon)/2.0))
-        let region: MKCoordinateRegion = MKCoordinateRegionMakeWithDistance(middlePoint, 2.0 * distance, 2.0 * distance)
+        let region: MKCoordinateRegion = MKCoordinateRegionMakeWithDistance(middlePoint, 0.5 * distance, 0.5 * distance)
         
         mapView.setRegion(region, animated: true)
         

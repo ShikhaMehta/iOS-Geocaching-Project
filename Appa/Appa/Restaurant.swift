@@ -19,10 +19,15 @@ class Restaurant {
         self.longitude = 0.0
     }
     
+    init(data:String){
+        
+    }
+    
     init(dict:NSDictionary){
         let geometry:NSDictionary = dict["geometry"] as! NSDictionary
-        self.latitude = geometry["lat"] as! Double
-        self.longitude = geometry["lng"] as! Double
+        let location:NSDictionary = geometry["location"] as! NSDictionary
+        self.latitude = location["lat"] as! Double
+        self.longitude = location["lng"] as! Double
         self.name = dict["name"] as! String
     }
     

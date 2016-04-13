@@ -50,7 +50,7 @@ class NetworkAsyncTask {
                 NSLog(error!)
                 callback(nil, error)
             } else {
-                let forecast:WeatherForecast = WeatherForecast(data: res)
+                let forecast:WeatherForecast = WeatherForecast(result: res)
                 if forecast.hasError() {
                     callback(nil, "Error parsing forecast data")
                 } else {
@@ -62,7 +62,7 @@ class NetworkAsyncTask {
         return true
     }
     
-    func getFoodNearby(lat:Double, lon:Double, radius:Double, callback: (NSArray?, String?) -> Void) -> Bool {
+    func getFoodNearby(lat:Double, lon:Double, radius:Double, callback: ([Restaurant]?, String?) -> Void) -> Bool {
         let rad:Double = 1609.34 * radius // 1609 meters in a mile
         let url:String = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=\(lat),\(lon)&radius=\(rad)&types=food&key=\(GOOGLE_API_KEY)"
         httpGet(url, callback: { (res:String, error: String?) -> Void in
@@ -71,6 +71,7 @@ class NetworkAsyncTask {
             } else {
                 if let data: NSData = res.dataUsingEncoding(NSUTF8StringEncoding){
                     do{
+                        NSLog("Restaurant Result: \n\n\(res)")
                         let dict = try NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers) as? [String:AnyObject]
                         if ((dict!["status"] as! String) == "OK") {
                             let results:NSArray = dict!["results"] as! NSArray
@@ -79,7 +80,7 @@ class NetworkAsyncTask {
                                 let restaurant:Restaurant = Restaurant(dict: results[i] as! NSDictionary)
                                 returnArray.append(restaurant)
                             }
-                            callback(returnArray as NSArray, nil)
+                            callback(returnArray, nil)
                         } else {
                             callback(nil, "Error")
                         }
