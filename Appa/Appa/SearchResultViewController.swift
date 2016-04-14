@@ -106,6 +106,11 @@ class SearchResultViewController: UIViewController {
                 }
             }
         }
+        if(segue.identifier == "newLogEntry"){
+            if let viewController:NewLogEntryViewController = segue.destinationViewController as? NewLogEntryViewController {
+                viewController.geocache = self.geocache!
+            }
+        }
     }
     
     

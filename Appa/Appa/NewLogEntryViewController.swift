@@ -15,9 +15,8 @@ import CoreLocation
 
 class NewLogEntryViewController: UIViewController {
     
-    //geocache that will have the log recorded to
-    //this was pass from the SearchResultView
-    var geocacheName: String? = nil
+    var geocache: Geocache?
+    
     // IBOutlets
     @IBOutlet weak var name: UITextField!
     
