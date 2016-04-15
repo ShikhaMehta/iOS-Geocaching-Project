@@ -1,10 +1,12 @@
-//
-//  Restaurant.swift
-//  Appa
-//
-//  Created by Tyler Brockett on 4/7/16.
-//  Copyright © 2016 ASU. All rights reserved.
-//
+/*
+ * @authors                 Tyler Brockett, Shikha Mehta, Tam Le
+ * @course                  ASU CSE 394
+ * @project                 Group Project
+ * @version                 April 15, 2016
+ * @project-description     Allows users to track Geocaches
+ * @class-name              Restaurant.swift
+ * @class-description       Helper class to store information about a specific restaurant
+ */
 
 import Foundation
 
@@ -17,10 +19,6 @@ class Restaurant {
         self.name = "default"
         self.latitude = 0.0
         self.longitude = 0.0
-    }
-    
-    init(data:String){
-        
     }
     
     init(dict:NSDictionary){

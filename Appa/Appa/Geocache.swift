@@ -1,10 +1,12 @@
-//
-//  Geocache.swift
-//  Appa
-//
-//  Created by Tyler Brockett on 4/7/16.
-//  Copyright © 2016 ASU. All rights reserved.
-//
+/*
+ * @authors                 Tyler Brockett, Shikha Mehta, Tam Le
+ * @course                  ASU CSE 394
+ * @project                 Group Project
+ * @version                 April 15, 2016
+ * @project-description     Allows users to track Geocaches
+ * @class-name              Geocache.swift
+ * @class-description       Generated file for Core Data, allows developer to add extra functionality to the Geocache object
+ */
 
 import Foundation
 import CoreData
@@ -14,11 +16,17 @@ class Geocache: NSManagedObject {
 
 // Insert code here to add functionality to your managed object subclass
     
-    func distanceTo(geocache:Geocache) -> Double {
-        let g1:CLLocation = CLLocation(latitude: Double(self.latitude!), longitude: Double(self.longitude!))
-        let g2:CLLocation = CLLocation(latitude: Double(geocache.latitude!), longitude: Double(geocache.longitude!))
-        let distance:Double = g1.distanceFromLocation(g2)
-        return distance
+    func logCount() -> Int {
+        return logs!.count
+    }
+    
+    func addLogToSet(log:Log){
+        let temp = self.mutableSetValueForKey("logs")
+        temp.addObject(log)
+    }
+    
+    func getLogsAsArray() -> [Log] {
+        return logs!.allObjects as! [Log]
     }
     
 }

@@ -1,3 +1,12 @@
+/*
+ * @authors                 Tyler Brockett, Shikha Mehta, Tam Le
+ * @course                  ASU CSE 394
+ * @project                 Group Project
+ * @version                 April 15, 2016
+ * @project-description     Allows users to track Geocaches
+ * @class-name              NearbyFoodTableCell.swift
+ * @class-description       Custom TableViewCell for the Restaurant TableView
+ */
 
 import UIKit
 import Foundation

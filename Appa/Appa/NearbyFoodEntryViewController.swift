@@ -1,10 +1,12 @@
-//
-//  NearbyFoodEntryViewController.swift
-//  Appa
-//
-//  Created by Tyler Brockett on 4/6/16.
-//  Copyright © 2016 ASU. All rights reserved.
-//
+/*
+ * @authors                 Tyler Brockett, Shikha Mehta, Tam Le
+ * @course                  ASU CSE 394
+ * @project                 Group Project
+ * @version                 April 15, 2016
+ * @project-description     Allows users to track Geocaches
+ * @class-name              NearbyFoodEntryViewController.swift
+ * @class-description       Displays MapView with annotations for the Geocache and the restaurant
+ */
 
 import MapKit
 import UIKit
@@ -14,9 +16,12 @@ class NearbyFoodEntryViewController: UIViewController {
     var restaurant:Restaurant = Restaurant()
     var geocacheLocation:CLLocation = CLLocation()
     
+    @IBOutlet weak var restaurantName: UILabel!
     @IBOutlet weak var mapView: MKMapView!
     
     override func viewDidLoad() {
+        restaurantName.text = restaurant.name
+        
         let restLat:Double = restaurant.latitude
         let restLon:Double = restaurant.longitude
         let geoLat:Double = geocacheLocation.coordinate.latitude
@@ -46,4 +51,5 @@ class NearbyFoodEntryViewController: UIViewController {
         geoAnnotation.title = "Geocache"
         self.mapView.addAnnotation(geoAnnotation)
     }
+
 }

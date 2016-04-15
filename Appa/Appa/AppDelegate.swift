@@ -1,10 +1,12 @@
-//
-//  AppDelegate.swift
-//  Appa
-//
-//  Created by Shikha Mehta on 3/8/16.
-//  Copyright © 2016 ASU. All rights reserved.
-//
+/*
+ * @authors                 Tyler Brockett, Shikha Mehta, Tam Le
+ * @course                  ASU CSE 394
+ * @project                 Group Project
+ * @version                 April 15, 2016
+ * @project-description     Allows users to track Geocaches
+ * @class-name              AppDelegate.swift
+ * @class-description       Handles application lifecycle events, Core Data initialization, etc
+ */
 
 import UIKit
 import CoreData

@@ -1,10 +1,12 @@
-//
-//  WeatherForecast.swift
-//  Appa
-//
-//  Created by Tyler Brockett on 4/7/16.
-//  Copyright © 2016 ASU. All rights reserved.
-//
+/*
+ * @authors                 Tyler Brockett, Shikha Mehta, Tam Le
+ * @course                  ASU CSE 394
+ * @project                 Group Project
+ * @version                 April 15, 2016
+ * @project-description     Allows users to track Geocaches
+ * @class-name              WeatherForecast.swift
+ * @class-description       Helper class to store information about the weather for a specific location
+ */
 
 import Foundation
 
@@ -24,10 +26,15 @@ class WeatherForecast {
                 let main:NSDictionary = dict!["main"]! as! NSDictionary
                 let weather:NSArray = dict!["weather"] as! NSArray
                 
-                self.current = String(main["temp"]!)
-                self.low = String(main["temp_min"]!)
-                self.high = String(main["temp_max"]!)
-                self.desc = String(weather[0]["main"]!!)
+                let c:Double = main["temp"] as! Double
+                let l:Double = main["temp_min"] as! Double
+                let h:Double = main["temp_max"] as! Double
+                let d:String = weather[0]["main"] as! String
+                
+                self.current = String(format:"%.1f", c)
+                self.low = String(format:"%.1f", l)
+                self.high = String(format:"%.1f", h)
+                self.desc = d
                 self.error = false
             } catch let error as NSError {
                 NSLog(error.localizedDescription)

@@ -1,10 +1,12 @@
-//
-//  NetworkAsyncTask.swift
-//  Appa
-//
-//  Created by Tyler Brockett on 4/6/16.
-//  Copyright © 2016 ASU. All rights reserved.
-//
+/*
+ * @authors                 Tyler Brockett, Shikha Mehta, Tam Le
+ * @course                  ASU CSE 394
+ * @project                 Group Project
+ * @version                 April 15, 2016
+ * @project-description     Allows users to track Geocaches
+ * @class-name              NetworkAsyncTask.swift
+ * @class-description       Sends HTTP GET request to servers to gather data, passes the closure/callback around where necessary, and eventualy calls the callback
+ */
 
 import Foundation
 import MapKit
@@ -22,8 +24,6 @@ class NetworkAsyncTask {
         callback: (String, String?) -> Void) {
             let request = NSMutableURLRequest(URL: NSURL(string: url)!)
             request.HTTPMethod = "GET"
-            request.addValue("application/json",forHTTPHeaderField: "Content-Type")
-            request.addValue("application/json",forHTTPHeaderField: "Accept")
             sendHttpRequest(request, callback: callback)
     }
     

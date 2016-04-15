@@ -17,14 +17,13 @@
 		2F29EEC41CB6043D00442821 /* LogTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F29EEC31CB6043D00442821 /* LogTableCell.swift */; };
 		2F29EEC61CB61CA500442821 /* NetworkAsyncTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F29EEC51CB61CA500442821 /* NetworkAsyncTask.swift */; };
 		2F29EEC91CB6474000442821 /* WeatherForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F29EEC81CB6474000442821 /* WeatherForecast.swift */; };
-		2F29EED41CB6630000442821 /* Geocache+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F29EED21CB6630000442821 /* Geocache+CoreDataProperties.swift */; };
 		2F29EED51CB6630000442821 /* Geocache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F29EED31CB6630000442821 /* Geocache.swift */; };
 		2F29EEDB1CB666A700442821 /* NewGeocacheViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F29EED81CB666A700442821 /* NewGeocacheViewController.swift */; };
 		2F29EEDD1CB6F43300442821 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F29EEDC1CB6F43300442821 /* Restaurant.swift */; };
-		2F29EEE41CB7302600442821 /* Log+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F29EEE21CB7302600442821 /* Log+CoreDataProperties.swift */; };
 		2F29EEE51CB7302600442821 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F29EEE31CB7302600442821 /* Log.swift */; };
 		2F317B5D1CA729700092DB9A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F317B5C1CA729700092DB9A /* SearchViewController.swift */; };
-		A7C728D11C912D01004D1F2D /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C728D01C912D01004D1F2D /* Pin.swift */; };
+		2F54092C1CC04BF3000EC9FD /* Log+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F54092A1CC04BF3000EC9FD /* Log+CoreDataProperties.swift */; };
+		2F5409301CC04F00000EC9FD /* Geocache+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F54092F1CC04F00000EC9FD /* Geocache+CoreDataProperties.swift */; };
 		A7FE0C341C8F3C7600BA96BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FE0C331C8F3C7600BA96BE /* AppDelegate.swift */; };
 		A7FE0C361C8F3C7600BA96BE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FE0C351C8F3C7600BA96BE /* HomeViewController.swift */; };
 		A7FE0C391C8F3C7600BA96BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7FE0C371C8F3C7600BA96BE /* Main.storyboard */; };
@@ -46,14 +45,13 @@
 		2F29EEC31CB6043D00442821 /* LogTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogTableCell.swift; sourceTree = "<group>"; };
 		2F29EEC51CB61CA500442821 /* NetworkAsyncTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkAsyncTask.swift; sourceTree = "<group>"; };
 		2F29EEC81CB6474000442821 /* WeatherForecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherForecast.swift; sourceTree = "<group>"; };
-		2F29EED21CB6630000442821 /* Geocache+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Geocache+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2F29EED31CB6630000442821 /* Geocache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geocache.swift; sourceTree = "<group>"; };
 		2F29EED81CB666A700442821 /* NewGeocacheViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewGeocacheViewController.swift; sourceTree = "<group>"; };
 		2F29EEDC1CB6F43300442821 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
-		2F29EEE21CB7302600442821 /* Log+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Log+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2F29EEE31CB7302600442821 /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		2F317B5C1CA729700092DB9A /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		A7C728D01C912D01004D1F2D /* Pin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pin.swift; sourceTree = "<group>"; };
+		2F54092A1CC04BF3000EC9FD /* Log+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Log+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2F54092F1CC04F00000EC9FD /* Geocache+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Geocache+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A7FE0C301C8F3C7600BA96BE /* Appa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Appa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7FE0C331C8F3C7600BA96BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7FE0C351C8F3C7600BA96BE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -81,7 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				2F29EED31CB6630000442821 /* Geocache.swift */,
-				2F29EED21CB6630000442821 /* Geocache+CoreDataProperties.swift */,
+				2F54092F1CC04F00000EC9FD /* Geocache+CoreDataProperties.swift */,
 			);
 			name = "Geocache Entity";
 			sourceTree = "<group>";
@@ -90,7 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				2F29EEE31CB7302600442821 /* Log.swift */,
-				2F29EEE21CB7302600442821 /* Log+CoreDataProperties.swift */,
+				2F54092A1CC04BF3000EC9FD /* Log+CoreDataProperties.swift */,
 			);
 			name = "Log Entity";
 			sourceTree = "<group>";
@@ -148,7 +146,6 @@
 				2F29EEC51CB61CA500442821 /* NetworkAsyncTask.swift */,
 				2F29EEC71CB61CB000442821 /* CustomTableViewCells */,
 				2F29EEB41CB5FF4700442821 /* Core Data */,
-				A7C728D01C912D01004D1F2D /* Pin.swift */,
 				2F29EEC81CB6474000442821 /* WeatherForecast.swift */,
 				2F29EEDC1CB6F43300442821 /* Restaurant.swift */,
 				A7FE0C3D1C8F3C7600BA96BE /* Assets.xcassets */,
@@ -232,7 +229,6 @@
 			files = (
 				2F317B5D1CA729700092DB9A /* SearchViewController.swift in Sources */,
 				2F29EEB61CB6007900442821 /* NewLogEntryViewController.swift in Sources */,
-				A7C728D11C912D01004D1F2D /* Pin.swift in Sources */,
 				A7FE0C361C8F3C7600BA96BE /* HomeViewController.swift in Sources */,
 				A7FE0C3C1C8F3C7600BA96BE /* Appa.xcdatamodeld in Sources */,
 				2F29EEBE1CB6012B00442821 /* LogViewController.swift in Sources */,
@@ -242,13 +238,13 @@
 				2F29EEC91CB6474000442821 /* WeatherForecast.swift in Sources */,
 				2F29EED51CB6630000442821 /* Geocache.swift in Sources */,
 				2F29EEC41CB6043D00442821 /* LogTableCell.swift in Sources */,
+				2F5409301CC04F00000EC9FD /* Geocache+CoreDataProperties.swift in Sources */,
 				2F29EEC01CB6014000442821 /* LogEntryViewController.swift in Sources */,
+				2F54092C1CC04BF3000EC9FD /* Log+CoreDataProperties.swift in Sources */,
 				2F29EEC61CB61CA500442821 /* NetworkAsyncTask.swift in Sources */,
 				2F29EEB81CB600BB00442821 /* SearchResultViewController.swift in Sources */,
 				2F29EEBC1CB6010F00442821 /* NearbyFoodEntryViewController.swift in Sources */,
 				2F29EEDD1CB6F43300442821 /* Restaurant.swift in Sources */,
-				2F29EEE41CB7302600442821 /* Log+CoreDataProperties.swift in Sources */,
-				2F29EED41CB6630000442821 /* Geocache+CoreDataProperties.swift in Sources */,
 				E6A632A11CBDACE1008F07F3 /* SearchTableViewController.swift in Sources */,
 				2F29EEDB1CB666A700442821 /* NewGeocacheViewController.swift in Sources */,
 				E6A632A31CBDFED3008F07F3 /* SearchTableCell.swift in Sources */,

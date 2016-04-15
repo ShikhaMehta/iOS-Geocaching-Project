@@ -5,10 +5,9 @@
         <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="has" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Log" syncable="YES"/>
+        <relationship name="logs" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Log" syncable="YES"/>
     </entity>
     <entity name="Log" representedClassName=".Log" syncable="YES">
-        <attribute name="geocacheID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="itemLeft" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="itemTaken" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
@@ -17,6 +16,6 @@
     </entity>
     <elements>
         <element name="Geocache" positionX="-369" positionY="-72" width="128" height="118"/>
-        <element name="Log" positionX="-63" positionY="9" width="128" height="135"/>
+        <element name="Log" positionX="-63" positionY="9" width="128" height="118"/>
     </elements>
 </model>

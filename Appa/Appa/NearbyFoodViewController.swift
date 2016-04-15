@@ -1,10 +1,12 @@
-//
-//  NearbyFoodViewController.swift
-//  Appa
-//
-//  Created by Tyler Brockett on 4/6/16.
-//  Copyright © 2016 ASU. All rights reserved.
-//
+/*
+ * @authors                 Tyler Brockett, Shikha Mehta, Tam Le
+ * @course                  ASU CSE 394
+ * @project                 Group Project
+ * @version                 April 15, 2016
+ * @project-description     Allows users to track Geocaches
+ * @class-name              NearbyFoodViewController.swift
+ * @class-description       Displays distance and name of restaurants near the Geocache
+ */
 
 import MapKit
 import UIKit
@@ -23,11 +25,9 @@ class NearbyFoodViewController: UITableViewController {
             let r2Loc:CLLocation = CLLocation(latitude: r2.latitude, longitude: r2.longitude)
             return r1Loc.distanceFromLocation(self.geocacheLocation) < r2Loc.distanceFromLocation(self.geocacheLocation)
         }
-        
         self.restaurantsTable.reloadData()
     }
     
-    // TableView functions
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return restaurants.count
     }
@@ -45,7 +45,7 @@ class NearbyFoodViewController: UITableViewController {
         if(segue.identifier == "nearbyFoodEntry"){
             let selectedIndex: NSIndexPath = self.restaurantsTable.indexPathForCell(sender as! UITableViewCell)!
             if let viewController: NearbyFoodEntryViewController = segue.destinationViewController as? NearbyFoodEntryViewController {
-                viewController.restaurant = restaurants[selectedIndex.row] as! Restaurant
+                viewController.restaurant = restaurants[selectedIndex.row] 
                 viewController.geocacheLocation = self.geocacheLocation
             }
         }

@@ -1,10 +1,12 @@
-//
-//  SearchResultViewController.swift
-//  Appa
-//
-//  Created by Tyler Brockett on 4/6/16.
-//  Copyright © 2016 ASU. All rights reserved.
-//
+/*
+ * @authors                 Tyler Brockett, Shikha Mehta, Tam Le
+ * @course                  ASU CSE 394
+ * @project                 Group Project
+ * @version                 April 15, 2016
+ * @project-description     Allows users to track Geocaches
+ * @class-name              SearchResultViewController.swift
+ * @class-description       Displays details about single Geocache. Allows user to view weather data, logs, or nearby restaurants
+ */
 
 import MapKit
 import UIKit
@@ -29,7 +31,6 @@ class SearchResultViewController: UIViewController {
     
     var restaurants:[Restaurant] = []
     
-    // viewDidLoad() - loads view into the memory and does view initialization
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -52,6 +53,7 @@ class SearchResultViewController: UIViewController {
             geoAnnotation.title = "Geocache"
             self.mapView.addAnnotation(geoAnnotation)
             
+            // Get weather data
             let task:NetworkAsyncTask = NetworkAsyncTask()
             task.getForecast(Double(geocache!.latitude!), lon: Double(geocache!.longitude!), callback: { (res:WeatherForecast?, error:String?) -> Void in
                 if error != nil {
@@ -66,18 +68,17 @@ class SearchResultViewController: UIViewController {
         
     }
     
-    
     func setForecastData(forecast:WeatherForecast?) {
         if forecast != nil {
-            self.currentTemp.text = forecast!.getTemp() + " F"
-            self.lowTemp.text = forecast!.getLow() + " F"
-            self.highTemp.text = forecast!.getHigh() + " F"
+            self.currentTemp.text = forecast!.getTemp() + "\u{00B0}F" // \u{00B0} is the degree symbol
+            self.lowTemp.text = forecast!.getLow() + "\u{00B0}F"
+            self.highTemp.text = forecast!.getHigh() + "\u{00B0}F"
             self.weatherDescription.text = forecast!.getDescription()
         } else {
-            self.currentTemp.text = "Error"
-            self.lowTemp.text = "Error"
-            self.highTemp.text = "Error"
-            self.weatherDescription.text = "Error"
+            self.currentTemp.text = "N/A"
+            self.lowTemp.text = "N/A"
+            self.highTemp.text = "N/A"
+            self.weatherDescription.text = "N/A"
         }
     }
     
@@ -89,11 +90,12 @@ class SearchResultViewController: UIViewController {
                     self.restaurants = res!
                     self.performSegueWithIdentifier("nearbyFood", sender: nil)
                 } else {
+                    let alert = UIAlertController(title: "No Results", message: "There were no food locations found near this area. Sorry!", preferredStyle: UIAlertControllerStyle.Alert)
+                    alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default, handler: nil))
+                    self.presentViewController(alert, animated: true, completion: nil)
                     NSLog(error!)
                 }
             })
-        } else {
-        
         }
     }
     
@@ -111,7 +113,11 @@ class SearchResultViewController: UIViewController {
                 viewController.geocache = self.geocache!
             }
         }
+        if(segue.identifier == "logs"){
+            if let viewController:LogViewController = segue.destinationViewController as? LogViewController {
+                viewController.geocache = self.geocache!
+            }
+        }
     }
-    
     
 }

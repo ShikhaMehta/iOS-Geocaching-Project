@@ -1,10 +1,12 @@
-//
-//  LogEntryViewController.swift
-//  Appa
-//
-//  Created by Tyler Brockett on 4/6/16.
-//  Copyright © 2016 ASU. All rights reserved.
-//
+/*
+ * @authors                 Tyler Brockett, Shikha Mehta, Tam Le
+ * @course                  ASU CSE 394
+ * @project                 Group Project
+ * @version                 April 15, 2016
+ * @project-description     Allows users to track Geocaches
+ * @class-name              LogEntryViewController.swift
+ * @class-description       Lets user view details of specific log entry for specific Geocache
+ */
 
 import UIKit
 import Foundation
