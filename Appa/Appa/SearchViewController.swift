@@ -22,7 +22,6 @@ class SearchViewController: UIViewController, UINavigationControllerDelegate, CL
 
     var geocaches:[Geocache] = []
     
-    @IBOutlet weak var searchName: UITextField!
     @IBOutlet weak var latitude: UITextField!
     @IBOutlet weak var longitude: UITextField!
     @IBOutlet weak var radius: UITextField!

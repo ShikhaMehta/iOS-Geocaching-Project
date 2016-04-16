@@ -25,7 +25,6 @@ class NewGeocacheViewController: UIViewController, MKMapViewDelegate, UINavigati
     let context = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
 
     let locationManager = CLLocationManager()
-    var locValue:CLLocationCoordinate2D!
 
     override func viewDidLoad() {
         super.viewDidLoad()
