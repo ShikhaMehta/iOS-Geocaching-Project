@@ -1,6 +1,9 @@
 # iOS Geocaching Project - CSE 394
 Geocaching app where people can add geocache locations, log their visits, and view food locations nearby the geocache.
 
+###### Authors    
+Tyler Brockett, Shikha Mehta, and Tam Le
+
 ## Instructions to run the application:
 
 - The UI is designed for iPhone 6s Plus
